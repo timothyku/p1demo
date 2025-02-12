@@ -13,7 +13,7 @@ public class P1DemoBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(P1DemoBackendApplication.class, args);
 
-		System.out.println("Video Game Management App is running");
+		System.out.println("Video Game Management App is running.");
 
 	}
 
