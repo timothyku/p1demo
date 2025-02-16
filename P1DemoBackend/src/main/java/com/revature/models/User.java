@@ -21,7 +21,8 @@ public class User {
 
     private String password;
 
-    private String role;
+    private String role = "user"; //we set a default value for role
+    // But we can specify a different role when we create a User if we need to
 
     //boilerplate --------------------------------------------
 
