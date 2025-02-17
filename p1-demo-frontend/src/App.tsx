@@ -7,6 +7,7 @@ import { Login } from './Components/LoginRegister/Login'
 import { Register } from './Components/LoginRegister/Register'
 
 import 'bootstrap/dist/css/bootstrap.css'
+import { UserTable } from './Components/User/UserTable'
 //^ This is a required manual import for bootsrap to work!!
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           {/* empty string or / for path makes the component render at startup */}
           <Route path="" element={<Login/>}/>
           <Route path="register" element={<Register/>}/>
+          <Route path="users" element={<UserTable/>}/>
         </Routes>
       </BrowserRouter>
     </>
