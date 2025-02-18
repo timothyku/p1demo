@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component //Make the class a bean
 @Entity //This makes the class a DB entity
 @Table(name = "video_games")
-public class VideoGames {
+public class VideoGame {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,15 +38,10 @@ public class VideoGames {
 
     //boilerplate -----------------
 
-
-    public VideoGames() {
+    public VideoGame() {
     }
 
-    public VideoGames(int gameId) {
-        this.gameId = gameId;
-    }
-
-    public VideoGames(int gameId, String title, String genre, User user) {
+    public VideoGame(int gameId, String title, String genre, User user) {
         this.gameId = gameId;
         this.title = title;
         this.genre = genre;

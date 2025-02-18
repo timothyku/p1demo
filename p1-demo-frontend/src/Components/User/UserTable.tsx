@@ -37,6 +37,9 @@ export const UserTable:React.FC = () => {
     //function that does a fake update delete 9wanna show how to extract data from a map)
     const updateUser = (user:User) => {
         alert("User " + user.userId + " has been fake updated or deleted")
+
+        //TODO: could definitely make another call to getAllUsers for automatic updates
+        //TODO: Cache the list of users and updated THAT so we don't make a repeat DB call
     }
 
     return (
