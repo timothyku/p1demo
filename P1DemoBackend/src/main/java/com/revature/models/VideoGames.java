@@ -38,6 +38,10 @@ public class VideoGames {
 
     //boilerplate -----------------
 
+
+    public VideoGames() {
+    }
+
     public VideoGames(int gameId) {
         this.gameId = gameId;
     }

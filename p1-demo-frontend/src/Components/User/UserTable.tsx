@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Container, Table } from "react-bootstrap"
+import { Button, Container, Table } from "react-bootstrap"
 import { User } from "../../Interfaces/User"
 
 export const UserTable:React.FC = () => {
@@ -35,7 +35,7 @@ export const UserTable:React.FC = () => {
     }
 
     return (
-        <Container>
+        <Container className="d-flex flex-column align-items-center">
 
             <h3>Users: </h3>
 
@@ -45,15 +45,20 @@ export const UserTable:React.FC = () => {
                         <th>User Id</th>
                         <th>Username</th>
                         <th>Role</th>
+                        <th>Options</th>
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody className="table-secondary">
                     {users.map((user:User) => (
                         <tr key={user.userId}> {/* To optimize performance, so no need to refresh whole table but only a row when a specific user data is updated*/}
                             <td>{user.userId}</td>
                             <td>{user.username}</td>
                             <td>{user.role}</td>
+                            <td>
+                                <Button variant="outline-success">Promote</Button>
+                                <Button variant="outline-danger">Fire</Button>
+                            </td>
                         </tr>
                     ))} {/* WHY () to open the arrow func? bc it implicityly returns (i.e. no need the return keyword) */}
                 </tbody>
