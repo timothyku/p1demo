@@ -74,7 +74,8 @@ public class AuthService {
 
         //If we get here, login successful so return a User to the controller
         return new OutgoingUserDTO(returnedUser); //using our convenient constructor that takes in a User
-        
+
+
 
     }
 
