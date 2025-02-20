@@ -53,7 +53,8 @@ public class VideoGameService {
 
         //save the new game to the DB, and return it ot the controller
         return videoGameDAO.save(newGame);
-        
+
     }
 
+    //TODO: Get games by user ID
 }
